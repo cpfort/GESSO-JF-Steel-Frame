@@ -266,6 +266,9 @@
          display:  block;
         
       }
+        #home p{
+        padding-bottom: 10vw;
+      }
 
       .servicos li{ 
         list-style: none ;
@@ -276,31 +279,101 @@
 
        justify-items: center;
        left: 2vw;
-       margin-bottom: 3vw
+       
+       margin-bottom: 20vw;
+       padding-left: 1vw;
+       padding-right: 1vw;
         
        }
     
-
-
+       .servicos h2{
+        position: relative;
+        top: -10vw;
+       }
+       .servicos p{
+        position: relative;
+        top: -10vw;
+        padding-bottom: 10vw;
+        
+       }
        .servicos #liD{
         
         position: relative;
         left: 2vw;
       }
+      .servicos #liD h3{
+        
+        position: relative;
+        left: 2vw;
+        top: -18vw;
+        line-height: 7vw;
+      }
+
+  
       .servicos #liD2{
        
         position: relative;
         left: 2vw;
       }
+      .servicos #liD2 h3{
+        font-size: 8vw;
+        position: relative;
+        top: -18vw;
+        line-height: 7vw;
+      }
 
       .servicos h3{
         font-size: 8vw;
+        position: relative;
+        top: -13vw;
       }
       .disable{
         font-size: 4vw;
         line-height: 7vw;
+        display: none;
       }
+
+      .image {
+        width: 89vw;
+        position: relative;
+         top: 50%;
+         left: 100vw; /* Começa fora da tela à direita */
+         transform: translateY(-50%);
+         animation: moveLoop 25s linear infinite;
+         object-fit: cover; /* Mantém a proporção e evita distorção */
+         border: #333 solid 2px;
+         
+ 
+     }
+
+     #carousel{
+      margin-top: 50vw;
+     }
+
+     #carousel h2{
+        position: relative;
+          text-align: center;
+          top: -58vw;
+      }
+      #carousel p{
+          position: relative;
+            text-align: center;
+            top: -56vw;
+        }
+
+
+        @keyframes moveLoop {
+            0% {
+                left: 330vw; /* Começa fora da tela à direita */
+            }
+            100% {
+                left: -340vw; /* Sai pela esquerda */
+            }
+    
 
 
       
     }
+
+
+}
