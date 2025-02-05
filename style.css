@@ -1,0 +1,294 @@
+        /* Resetando margens e paddings padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            
+        }
+        html, body {
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Estilos do header */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 2vw 8vw;
+            text-align: right;
+            position: sticky;
+        }
+        header p{
+        position: relative;
+        right:68.5vw ;
+        top: -1vw;
+        font-size: 2.2vw
+
+        }
+
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.5vw;
+            position: relative;
+            top: 2vw;
+           text-decoration: none;
+          
+          
+            
+        }
+        header .logo{
+         position: relative;
+        right: 80vw;
+          height: 7vw;
+          margin-top: -3vw;
+          margin-left: -2vw;
+          
+           
+
+
+            
+        }
+
+        /* Layout básico */
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header nav {
+                display: block;
+                text-align: center;
+                height: 35vw;
+                
+            }
+
+            header nav a {
+                display: block;
+                margin: 10px 0;
+                font-size: 5.5vw;
+                margin-left: 30vw;
+                
+            }
+            header .logo { 
+                position: relative;          
+               height: 27vw;
+               top: -20vw;
+               right: 60vw;
+              
+             
+               
+     
+                 
+            }
+
+            main {
+                padding: 10px;
+            }
+        }
+
+        /* Estilo básico para links */
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+      /* SECTION HOME */
+
+      #home{
+        text-align: center;
+      }
+
+      /* section serviços */
+
+      .servicos{
+            
+      }
+      .servicos h2,.servicos p {
+        text-align: center;
+        
+      }
+      .servicos p{
+        margin-bottom: 2vw;
+      }
+      .servicos ul{
+        
+         display:  grid;
+         gap: 1vw;  
+         text-align: center;
+         grid-template-columns: repeat(3, 1fr); /* 3 colunas na primeira linha */
+
+
+      }
+      .servicos li{ 
+       list-style: none ;
+    border-radius: 10px; 
+       flex: 1;
+       height: 23vw;
+       width: 30vw;
+       font-size: 1.3vw;
+        font-weight: 550;
+      background-image: url(fundo.webp); 
+      transition: all 0.3s ease-in-out;
+   
+      
+       
+      }
+      .disable{
+       
+        line-height: 2vw;
+        
+
+      }
+      .servicos li:hover{ 
+        transform: translate(0%, -0%) scale(1.1);
+        box-shadow: 0px 0px 20px rgba(83, 88, 88, 0.8); /* Brilho azul */
+        .disable{
+            display: none
+        }
+       
+
+      }
+      .servicos #liD{
+        
+        position: relative;
+        left: 10vw;
+      }
+      .servicos #liD2{
+        
+        position: relative;
+        left: 20vw;
+      }
+
+
+     
+
+    /* Faixa de imagens */
+    
+    
+    .image {
+       width: 29%;
+       position: relative;
+        top: 50%;
+        left: 100vw; /* Começa fora da tela à direita */
+        transform: translateY(-50%);
+        animation: moveLoop 10s linear infinite;
+        object-fit: cover; /* Mantém a proporção e evita distorção */
+        border: #333 solid 2px;
+        
+
+    }
+
+    
+    #carousel{
+        padding-top: 14vw;
+       
+    }
+    #carousel h2{
+      position: relative;
+        text-align: center;
+        top: -16vw;
+    }
+    #carousel p{
+        position: relative;
+          text-align: center;
+          top: -16vw;
+      }
+    .carousel{
+        display:flex;
+        justify-content: center;
+        align-items: center; 
+       
+        gap: 0.5vw;
+    }
+    #contatos{
+        align-items: center;
+        text-align: center;
+        margin-bottom: 5vw;
+
+    }
+    #historia{
+        position: relative;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 5vw;
+        top: -13vw;
+
+    }
+
+    footer{
+        text-align: center;
+    }
+
+
+
+    @keyframes moveLoop {
+        0% {
+            left: 147vw; /* Começa fora da tela à direita */
+        }
+        100% {
+            left: -147vw; /* Sai pela esquerda */
+        }
+
+
+    }
+
+
+
+
+  
+
+
+      @media (max-width: 768px) {
+        .servicos ul{
+           
+         gap: 1vw;  
+         display:  block;
+        
+      }
+
+      .servicos li{ 
+        list-style: none ;
+        flex: 1;
+        height: 90vw;
+        width: 90vw;
+         position: relative;
+
+       justify-items: center;
+       left: 2vw;
+       margin-bottom: 3vw
+        
+       }
+
+
+       .servicos #liD{
+        
+        position: relative;
+        left: 2vw;
+      }
+      .servicos #liD2{
+       
+        position: relative;
+        left: 2vw;
+      }
+
+      .servicos h3{
+        font-size: 8vw;
+      }
+      .disable{
+        font-size: 4vw;
+        line-height: 7vw;
+      }
+    }
