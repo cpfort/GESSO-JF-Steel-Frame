@@ -1,3 +1,11 @@
+        /* Importando fonte profissional */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+        section{
+          border: #ffffff11 solid 2px;
+          background-color:#2c2c2c8b;
+        }
+        
         /* Resetando margens e paddings padrão */
         * {
             margin: 0;
@@ -14,31 +22,37 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            background-color: #a5a5a5;
+            background-image: url(grunge-wall-texture.jpg);
         }
 
         /* Estilos do header */
         header {
-            background-color: #333;
+            
             color: white;
             padding: 2vw 8vw;
             text-align: right;
             position: sticky;
+            background: rgba(30, 30, 30, 0.9); /* Transparente e elegante */
+            backdrop-filter: blur(5px);
+           
         }
         header p{
         position: relative;
-        right:68.5vw ;
-        top: -1vw;
-        font-size: 2.2vw
+        right:35vw ;
+        top: 2vw;
+        font-size: 4.2vw;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
         }
 
         header nav a {
-            color: white;
+            color: rgb(214, 214, 214);
             margin: 0 15px;
             text-decoration: none;
             font-size: 1.5vw;
             position: relative;
-            top: 2vw;
+            top: 3vw;
            text-decoration: none;
           
           
@@ -47,10 +61,10 @@
         header .logo{
          position: relative;
         right: 80vw;
-          height: 7vw;
+          height: 9vw;
           margin-top: -3vw;
-          margin-left: -2vw;
-          
+          right: 70vw ;
+          border-radius: 10px;
            
 
 
@@ -68,31 +82,40 @@
 
         /* Responsividade */
         @media (max-width: 768px) {
+          header{
+            height: 50vw;
+          }
             header nav {
                 display: block;
                 text-align: center;
                 height: 35vw;
+                position: relative;
+                top: -5vw;
                 
             }
 
             header nav a {
                 display: block;
+                position: relative;
                 margin: 10px 0;
                 font-size: 5.5vw;
                 margin-left: 30vw;
+               
                 
             }
             header .logo { 
                 position: relative;          
                height: 27vw;
-               top: -20vw;
+               top: -30vw;
                right: 60vw;
+               border-radius: 10px;
               
              
                
      
                  
             }
+        
 
             main {
                 padding: 10px;
@@ -101,14 +124,34 @@
 
         /* Estilo básico para links */
         a:hover {
-            text-decoration: underline;
+            text-decoration: none;
+            color: #e3e3e3; /* Amarelo metálico */
+            text-shadow: 0 0 2px #000000, 0 0 10px #000000;
+            
         }
 
 
       /* SECTION HOME */
 
       #home{
+        
         text-align: center;
+        border-radius: 10px;
+        margin-bottom: 2vw;
+        padding-top: 2vw;
+        padding-bottom: 3vw;
+        font-size: 1.4vw;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+           
+      }
+      #home p{
+        text-align: center;
+        width: 80vw;
+        color: rgb(38, 42, 38);
+        border-bottom: 2px solid rgb(76, 78, 33);
+        font-weight: 550;
       }
 
       /* section serviços */
@@ -134,18 +177,49 @@
       }
       .servicos li{ 
        list-style: none ;
-    border-radius: 10px; 
+      border-radius: 10px; 
        flex: 1;
        height: 23vw;
        width: 30vw;
        font-size: 1.3vw;
         font-weight: 550;
-      background-image: url(fundo.webp); 
+     border: #0000009e solid 4px;
       transition: all 0.3s ease-in-out;
-   
+  
       
        
       }
+
+      .ft1{
+        background-image: url(forro-de-gesso.jpeg);
+      }
+      .ft2{
+        background-image: url(ft2.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0% 90%;
+      }
+      .ft3{
+        background-image: url(sancas.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0% 0%;
+      }
+      .ft4{
+        background-image: url(Revestimento\ de\ Paredes\ \(Gesso\ Liso\).jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0% 90%;
+      }
+      .ft5{
+        background-image: url(decorativos.jpg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0% 50%;
+      }
+
+
+
       .disable{
        
         line-height: 2vw;
@@ -186,37 +260,39 @@
         transform: translateY(-50%);
         animation: moveLoop 10s linear infinite;
         object-fit: cover; /* Mantém a proporção e evita distorção */
-        border: #333 solid 2px;
+        
         
 
     }
 
     
     #carousel{
+      margin-top: 10vw;
         padding-top: 14vw;
        
     }
     #carousel h2{
       position: relative;
         text-align: center;
-        top: -16vw;
+        top: -19vw;
     }
     #carousel p{
         position: relative;
           text-align: center;
-          top: -16vw;
+           top: -19vw;
       }
     .carousel{
         display:flex;
         justify-content: center;
         align-items: center; 
-       
-        gap: 0.5vw;
+     
+        gap: 3vw;
     }
     #contatos{
         align-items: center;
         text-align: center;
         margin-bottom: 5vw;
+        text-shadow: #000000 2px 2px 4px;
 
     }
     #historia{
@@ -224,13 +300,28 @@
         align-items: center;
         text-align: center;
         margin-bottom: 5vw;
-        top: -13vw;
+        top: -3vw;
+        border-radius: 10px;
+        height: 30vw;
+        background-color: #0000002a;
+       
 
     }
 
     footer{
         text-align: center;
+        background-color: #a5a5a5;
     }
+
+
+    .iconW{
+      filter: brightness(1.5);
+      width: 5vw;
+      cursor: pointer;
+
+    }
+
+
 
 
 
@@ -252,6 +343,9 @@
 
 
       @media (max-width: 768px) {
+        .servicos{
+          border-radius: 10px;
+        }
 
         .servicos li:hover{ 
             transform: translate(0%, -0%) scale(1);
@@ -267,7 +361,11 @@
         
       }
         #home p{
-        padding-bottom: 10vw;
+       line-height: 5.5vw;
+        font-size: 4vw;
+      }
+      #home{
+        height: 37vw;
       }
 
       .servicos li{ 
@@ -288,11 +386,11 @@
     
        .servicos h2{
         position: relative;
-        top: -10vw;
+        top: 0vw;
        }
        .servicos p{
         position: relative;
-        top: -10vw;
+        top: 0vw;
         padding-bottom: 10vw;
         
        }
@@ -341,13 +439,15 @@
          transform: translateY(-50%);
          animation: moveLoop 25s linear infinite;
          object-fit: cover; /* Mantém a proporção e evita distorção */
-         border: #333 solid 2px;
+         border-top: #333 solid 9px;
+         border-bottom: #333 solid 9px;
          
  
      }
 
      #carousel{
       margin-top: 50vw;
+      background-color: rgba(0, 0, 0, 0);
      }
 
      #carousel h2{
@@ -374,6 +474,44 @@
 
       
     }
+
+    .iconW{
+      filter: brightness(1.5);
+      width: 20vw;
+      
+
+    }
+
+    #contatos{
+      align-items: center;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 5vw;
+      text-shadow: #000000 2px 2px 4px;
+      border-radius: 10px;
+
+  }
+
+
+  #historia{
+    position: relative;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5vw;
+    top: -43vw;
+    height: 90vw;
+    border-radius: 10px;
+
+}
+
+header p{
+  position: relative;
+  right:61vw ;
+  top: -27vw;
+  font-size: 5.2vw;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+  }
 
 
 }
