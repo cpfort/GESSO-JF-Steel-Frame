@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
         section{
           border: #ffffff11 solid 2px;
-          background-color:#2c2c2c8b;
+         
         }
         
         /* Resetando margens e paddings padrão */
@@ -292,7 +292,10 @@
         align-items: center;
         text-align: center;
         margin-bottom: 5vw;
-        text-shadow: #000000 2px 2px 4px;
+        text-shadow: #000000b9 2px 2px 2px;
+       border-bottom: #000000 2px solid;
+       border-top: #000000 2px solid;
+       background-color: #3333337e;
 
     }
     #historia{
