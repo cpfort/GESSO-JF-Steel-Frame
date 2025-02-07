@@ -33,8 +33,9 @@
             padding: 2vw 8vw;
             text-align: right;
             position: sticky;
-            background: rgba(30, 30, 30, 0.9); /* Transparente e elegante */
+            background: #393e44; /* Transparente e elegante */
             backdrop-filter: blur(5px);
+            height: 16vw;
            
         }
         header p{
@@ -59,10 +60,12 @@
             
         }
         header .logo{
-         position: relative;
+         position: absolute;
+         
         right: 80vw;
-          height: 9vw;
-          margin-top: -3vw;
+        width: 20vw;
+          
+          margin-top: -6vw;
           right: 70vw ;
           border-radius: 10px;
            
@@ -105,9 +108,9 @@
             }
             header .logo { 
                 position: relative;          
-               height: 27vw;
-               top: -30vw;
-               right: 60vw;
+              width: 50vw;
+               top: -33vw;
+               right: 40vw;
                border-radius: 10px;
               
              
@@ -217,6 +220,14 @@
         background-repeat: no-repeat;
         background-position: 0% 50%;
       }
+      .ft6{
+        background-image: url(aplicar-gesso-liso.jpg);
+        background-size: cover;
+       
+        background-repeat: no-repeat;
+        background-position: 0% 50%;
+      }
+
 
 
 
@@ -238,12 +249,12 @@
       .servicos #liD{
         
         position: relative;
-        left: 10vw;
+        
       }
       .servicos #liD2{
         
         position: relative;
-        left: 20vw;
+        
       }
 
 
@@ -251,15 +262,86 @@
 
     /* Faixa de imagens */
     
+    .porti1{
+     
+      background-image: url(IMG-20250206-WA0003.jpg);
+
+     width: 30vw;
+      height: 30vw;
+      flex: none;
+      background-position: center;
+      background-size: cover; 
+    }
+    .porti2{
+      background-image: url(IMG-20250206-WA0004.jpg);
+      width: 30vw;
+      height: 30vw;
+      
+      background-position: center;
+      background-size: cover; 
+      flex: none;
     
+    }
+    .porti3{
+      background-image: url(IMG-20250206-WA0005.jpg);
+      width: 30vw;
+      height: 30vw;
+      background-position: center;
+      background-size: cover; 
+      flex: none;
+     
+    }
+    .porti4{
+      background-image: url(IMG-20250206-WA0006.jpg);
+      width: 30vw;
+      height: 30vw;
+      background-position: center;
+      background-size: cover; 
+      flex: none;
+     
+    }
+    .porti5{
+      background-image: url(img7.jpg);
+      width: 30vw;
+      height: 30vw;
+      background-position: center;
+    
+      background-size: cover; 
+      flex: none;
+    
+    }
+    .porti6{
+      background-image: url(img8.jpg);
+      width: 30vw;
+      height: 30vw;
+      background-position: center;
+      background-size: cover; 
+      flex: none;
+  
+      
+      
+    }
+
+
+
+
+
+
+
+
+
+
+
     .image {
-       width: 29%;
+     
        position: relative;
-        top: 50%;
+       
         left: 100vw; /* Começa fora da tela à direita */
         transform: translateY(-50%);
         animation: moveLoop 10s linear infinite;
         object-fit: cover; /* Mantém a proporção e evita distorção */
+        border-top:6px solid #333 ;
+        border-bottom:6px solid #333 ;
         
         
 
@@ -282,9 +364,8 @@
            top: -19vw;
       }
     .carousel{
-        display:flex;
-        justify-content: center;
-        align-items: center; 
+      display: flex;
+      flex: none;
      
         gap: 3vw;
     }
@@ -330,10 +411,10 @@
 
     @keyframes moveLoop {
         0% {
-            left: 147vw; /* Começa fora da tela à direita */
+            left: 140vw; /* Começa fora da tela à direita */
         }
         100% {
-            left: -147vw; /* Sai pela esquerda */
+            left: -195vw; /* Sai pela esquerda */
         }
 
 
@@ -440,7 +521,7 @@
          top: 50%;
          left: 100vw; /* Começa fora da tela à direita */
          transform: translateY(-50%);
-         animation: moveLoop 25s linear infinite;
+         animation: moveLoop2 25s linear infinite;
          object-fit: cover; /* Mantém a proporção e evita distorção */
          border-top: #333 solid 9px;
          border-bottom: #333 solid 9px;
@@ -465,12 +546,12 @@
         }
 
 
-        @keyframes moveLoop {
+        @keyframes moveLoop2 {
             0% {
-                left: 330vw; /* Começa fora da tela à direita */
+                left:100vw; /* Começa fora da tela à direita */
             }
             100% {
-                left: -340vw; /* Sai pela esquerda */
+                left: -590vw; /* Sai pela esquerda */
             }
     
 
@@ -494,6 +575,9 @@
       border-radius: 10px;
 
   }
+  #contatos .contatosp1 {
+    text-align: center;
+  }
 
 
   #historia{
@@ -515,6 +599,75 @@ header p{
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
   }
+
+  .GL{
+    margin-top: 3vw;
+  }
+
+    .carousel{
+      position: relative;
+      top: -10vw;
+    }
+  .porti1{
+     
+    background-image: url(IMG-20250206-WA0003.jpg);
+
+   width: 90vw;
+    height: 90vw;
+    flex: none;
+    background-position: center;
+    background-size: cover; 
+  }
+  .porti2{
+    background-image: url(IMG-20250206-WA0004.jpg);
+    width: 90vw;
+    height: 90vw;
+    
+    background-position: center;
+    background-size: cover; 
+    flex: none;
+  
+  }
+  .porti3{
+    background-image: url(IMG-20250206-WA0005.jpg);
+    width: 90vw;
+    height: 90vw;
+    background-position: center;
+    background-size: cover; 
+    flex: none;
+   
+  }
+  .porti4{
+    background-image: url(IMG-20250206-WA0006.jpg);
+    width: 90vw;
+    height: 90vw;
+    background-position: center;
+    background-size: cover; 
+    flex: none;
+   
+  }
+  .porti5{
+    background-image: url(img7.jpg);
+    width: 90vw;
+    height: 90vw;
+    background-position: center;
+  
+    background-size: cover; 
+    flex: none;
+  
+  }
+  .porti6{
+    background-image: url(img8.jpg);
+    width: 90vw;
+    height: 90vw;
+    background-position: center;
+    background-size: cover; 
+    flex: none;
+
+    
+    
+  }
+
 
 
 }
