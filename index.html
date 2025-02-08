@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Stellframe</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
     
 </head>
 <body>
@@ -59,34 +61,30 @@
         </section>
 
         <!-- Seção Contatos -->
-        <section id="contatos">
+        <section id="contatos" class="contatos">
             <h2>Contatos</h2>
            
-            <p>Email: contato@exemplo.com</p>
-            <p>Telefone: (11) 1234-5678</p>
+            <p >Email:contato@exemplo.com</p>
+            <p>Telefone: (19) 997105-3008</p>
             <p><span style="color: white;">Clique no icone</span> para falar direitamente conosco por WhatsApp</p>
             <a class="iconW" href="https://wa.me/+19971053008" target="_blank"><img class="iconW" src="—Pngtree—whatsapp mobile software icon_8704828.png" alt="" ></a>
             
         </section>
-
+        <aside> 
+            <p>Veja mais imagens do nosso Portifolio</p>
+        </aside>
         <!-- Seção Portfólio -->
-        <section id="carousel">
-            <h2>Portfólio</h2>
-            <p>Aqui estão alguns dos nossos projetos:</p>
-            <div class="carousel">
-                <div class="image porti1"></div>
-                <div class="image porti2"></div>
-                <div class="image porti3"></div>
-                <div class="image porti4"></div>
-                <div class="image porti5"></div>
-                <div class="image porti6"></div>
-<!--                
-                <img src="IMG-20250206-WA0004.jpg" alt="Projeto 2" width="30%"class="image">
-                <img src="IMG-20250206-WA0005.jpg" alt="Projeto 2" width="30%"class="image">
-                <img src="IMG-20250206-WA0006.jpg" alt="Projeto 1" width="30%" class="image">
-                <img src="img7.jpg" alt="Projeto 2" width="30%"class="image">
-                <img src="img8.jpg" alt="Projeto 2" width="30%"class="image"> -->
-            </div>
+        <section  class="carousel">
+            
+          
+            <div class="testss" > <img  class="imgCosuel" style=" background-image: url(IMG-20250206-WA0003.jpg);" ></div>
+            <div class="testss" ><img class="imgCosuel"  style=" background-image: url(IMG-20250206-WA0004.jpg);"></div>
+            <div class="testss" ><img class="imgCosuel"  style=" background-image: url(IMG-20250206-WA0005.jpg);"  ></div>
+            <div class="testss" ><img class="imgCosuel"  style=" background-image: url(IMG-20250206-WA0006.jpg);" ></div>
+            <div class="testss" ><img class="imgCosuel"  style=" background-image: url(img7.jpg);" ></div>
+            <div class="testss" ><img  class="imgCosuel" style=" background-image: url(img8.jpg);"  ></div>
+
+
         </section>
 
         <!-- Seção História -->
@@ -98,5 +96,32 @@
     <footer>
           &copy;Stellframe
     </footer>
+
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                autoplay: true, // Habilita o autoplay
+                autoplaySpeed: 2000, // Tempo entre os slides (2 segundos)
+                dots: true, // Mostra os pontos de navegação
+                infinite: true, // Loop infinito
+                speed: 500, // Velocidade da transição
+                slidesToShow: 1, // Quantidade de slides visíveis
+                adaptiveHeight: true, // Ajusta a altura automaticamente
+                pauseOnHover: false, // Desabilita a pausa no hover
+                pauseOnFocus: false, // Desabilita a pausa no foco (clique)
+                pauseOnDotsHover: false, // Desabilita a pausa ao passar o mouse sobre os dots
+                arrows: false, // Remove as setas de navegação
+                slidesToShow: 1, // Exibe apenas um slide por vez
+                slidesToScroll: 1, // Passa um slide por vez
+                
+            });
+        });
+    </script>
 </body>
 </html>
