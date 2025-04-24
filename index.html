@@ -1,127 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Stellframe</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-    
+  <meta charset="UTF-8">
+  <title>Pré-Conferência de Prato</title>
+  <style>
+    video, canvas {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    #colorBox {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .color-sample {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#home"></a>
-            <a href="#servicos">Serviços</a>
-            <a href="#contatos">Contatos</a>
-            <a href="#portfolio">Portfólio</a>
-            <a href="#historia">História</a>
-            
-        </nav>
-           
-      
-        <a href="#home"> <img src="logoJF-removebg-preview.png" alt="logo" class="logo"></a>
-       
-       
-           
-           
-        
-        
-    </header>
+  <h2>Pré-Conferência Visual de Prato</h2>
+  <video id="video" autoplay></video>
+  <button onclick="captureImage()">Capturar Imagem</button>
+  <canvas id="canvas" style="display: none;"></canvas>
+  <div id="colorBox"></div>
 
-    <main>
-        <!-- Seção Home -->
-        <section id="home">
-           
-            <p>Somos uma empresa de Limeira-SP e região do setor da construção civil, especializada em gesso, com mais de 25 anos de experiência, contamos  com verdadeiros artesãos para aprimorar sua obra</p>
-        </section>
+  <script src="https://unpkg.com/color-thief-browser/dist/color-thief.umd.js"></script>
+  <script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const colorBox = document.getElementById('colorBox');
 
-        <!-- Seção Serviços -->
-        <section class="servicos" id="servicos">
-            <h2>Serviços</h2>
-            <p>Confira os serviços que oferecemos:</p>
-            <ul>
-                
-                <li class="ft1"> <h3>Forro de Gesso</h3> <span class="disable">Instalação de placas de gesso no teto, oferecendo um acabamento liso e elegante.</span>
-                </li>
-                <li class="ft2"> <h3>Divisórias de Drywall</h3> <span class="disable">Construção de paredes internas utilizando placas de gesso acartonado, ideais para criar novos ambientes de forma rápida e limpa.</span> </li>
-                <li class="ft3"><h3>Sancas</h3><span class="disable">Elementos decorativos instalados no encontro entre o teto e as paredes, permitindo a criação de efeitos de iluminação indireta.</span>
-                </li>
-               
-                    <li class="ft4" id="liD"><h3 class="GL">Painéis 3D </h3><span class="disable">Aplicação de painéis 3d em gesso</span></li>
-                    <li class="ft5" id="liD2"><h3>Molduras e Detalhes Decorativos</h3><span class="disable">Criação de elementos decorativos, como rodatetos, rodatrilhas e outros adornos em gesso.</span>
-                    </li>
-                    <li class="ft6" id="liD2"><h3 class="GL">Gesso liso</h3><span class="disable">Criação de elementos decorativos, como rodatetos, rodatrilhas e outros adornos em gesso.</span>
-                    </li>
-                
-                
-            </ul>
-        </section>
+    // Acessa a câmera do celular
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(stream => video.srcObject = stream)
+      .catch(err => alert('Erro ao acessar a câmera: ' + err));
 
-        <!-- Seção Contatos -->
-        <section id="contatos" class="contatos">
-            <h2>Contatos</h2>
-           
-            <p >Email:contato@exemplo.com</p>
-            <p>Telefone: (19) 997105-3008</p>
-            <p><span style="color: white;">Clique no icone</span> para falar direitamente conosco por WhatsApp</p>
-            <a class="iconW" href="https://wa.me/+19971053008" target="_blank"><img class="iconW" src="—Pngtree—whatsapp mobile software icon_8704828.png" alt="" ></a>
-            
-        </section>
-        <aside> 
-            <p>Veja mais imagens do nosso Portifolio</p>
-        </aside>
-        <!-- Seção Portfólio -->
-        <section  class="carousel">
-            
-          
-            <div class="testss" > <img  class="imgCosuel" style=" background-image: url(IMG-20250206-WA0003.jpg);" ></div>
-            <div class="testss" ><img class="imgCosuel"  style=" background-image: url(IMG-20250206-WA0004.jpg);"></div>
-            <div class="testss" ><img class="imgCosuel"  style=" background-image: url(IMG-20250206-WA0005.jpg);"  ></div>
-            <div class="testss" ><img class="imgCosuel"  style=" background-image: url(IMG-20250206-WA0006.jpg);" ></div>
-            <div class="testss" ><img class="imgCosuel"  style=" background-image: url(img7.jpg);" ></div>
-            <div class="testss" ><img  class="imgCosuel" style=" background-image: url(img8.jpg);"  ></div>
+    function captureImage() {
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      const colorThief = new ColorThief();
+      const img = new Image();
+      img.src = canvas.toDataURL();
+      img.onload = () => {
+        const palette = colorThief.getPalette(img, 5);
+        showColors(palette);
+      };
+    }
 
-
-        </section>
-
-        <!-- Seção História -->
-        <section id="historia">
-            <h2>História</h2>
-            <p>Saiba mais sobre nossa trajetória e como chegamos até aqui.</p>
-        </section>
-    </main>
-    <footer>
-          &copy;Stellframe
-    </footer>
-
-
-    
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
-    <script>
-        $(document).ready(function(){
-            $('.carousel').slick({
-                autoplay: true, // Habilita o autoplay
-                autoplaySpeed: 2000, // Tempo entre os slides (2 segundos)
-                dots: true, // Mostra os pontos de navegação
-                infinite: true, // Loop infinito
-                speed: 500, // Velocidade da transição
-                slidesToShow: 1, // Quantidade de slides visíveis
-                adaptiveHeight: true, // Ajusta a altura automaticamente
-                pauseOnHover: false, // Desabilita a pausa no hover
-                pauseOnFocus: false, // Desabilita a pausa no foco (clique)
-                pauseOnDotsHover: false, // Desabilita a pausa ao passar o mouse sobre os dots
-                arrows: false, // Remove as setas de navegação
-                slidesToShow: 1, // Exibe apenas um slide por vez
-                slidesToScroll: 1, // Passa um slide por vez
-                
-            });
-        });
-    </script>
+    function showColors(colors) {
+      colorBox.innerHTML = '';
+      colors.forEach(color => {
+        const div = document.createElement('div');
+        div.className = 'color-sample';
+        div.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+        colorBox.appendChild(div);
+      });
+    }
+  </script>
 </body>
 </html>
